@@ -35,6 +35,16 @@ function classNames(...classes) {
 export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <div>
@@ -189,18 +199,34 @@ export default function Navbar() {
                   </ul>
                 </li>
 
-                <li className="mt-auto">
-                  <a
-                    href="#"
-                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white"
-                  >
+                <details
+                  className="dropdown"
+                  open={isOpen}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <summary className="m-1 btn group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white">
                     <Cog6ToothIcon
                       className="h-6 w-6 shrink-0"
                       aria-hidden="true"
-                    />
+                    />{" "}
                     Info
-                  </a>
-                </li>
+                  </summary>
+                  <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                    <li className="  p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white ">
+                      <Link to="/impressum">
+                        {" "}
+                        <p>Impressum</p>
+                      </Link>
+                    </li>
+                    <li className="  p-2 text-sm font-semibold leading-6 text-gray-400 hover:bg-gray-800 hover:text-white ">
+                      <Link to="/version">
+                        {" "}
+                        <p>Version</p>
+                      </Link>
+                    </li>
+                  </ul>
+                </details>
               </ul>
             </nav>
           </div>

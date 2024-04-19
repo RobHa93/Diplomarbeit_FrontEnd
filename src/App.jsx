@@ -5,6 +5,8 @@ import Contact from "./pages/Contact.jsx";
 import Report from "./pages/Report.jsx";
 import Search from "./pages/Search.jsx";
 import NoPage from "./pages/NoPage.jsx";
+import Impressum from "./pages/Impressum.jsx";
+import Version from "./pages/Version.jsx";
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
           <Route path="/documents" element={<Documents />} />
           <Route path="/report" element={<Report />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/version" element={<Version />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </BrowserRouter>

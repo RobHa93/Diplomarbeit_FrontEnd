@@ -13,15 +13,15 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const navigation = [
-  { name: "Home", href: "./home", icon: HomeIcon, current: true },
+  { name: "Home", href: "/home", icon: HomeIcon, current: true },
   {
     name: "Documents",
-    href: "./documents",
+    href: "/documents",
     icon: DocumentDuplicateIcon,
     current: false,
   },
-  { name: "Report", href: "./report", icon: ChartPieIcon, current: false },
-  { name: "Contact", href: "./contact", icon: UsersIcon, current: false },
+  { name: "Report", href: "/report", icon: ChartPieIcon, current: false },
+  { name: "Contact", href: "/contact", icon: UsersIcon, current: false },
 ];
 const teams = [
   { id: 1, name: "Eingang", href: "#", initial: "M", current: false },

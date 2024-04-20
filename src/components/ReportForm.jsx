@@ -29,7 +29,7 @@ function ReportForm() {
 
   return (
     <>
-      <h1 className="  text-red-500 text-3xl font-bold  mb-12 text-center">
+      <h1 className="  text-red-500 text-3xl font-bold lg:ml-[400px] mb-12 text-center">
         Please fill out your report{" "}
       </h1>
       <div className="max-w-lg mx-auto">

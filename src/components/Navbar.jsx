@@ -13,20 +13,20 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 const navigation = [
-  { name: "Home", path: "/home", icon: HomeIcon, current: true },
+  { name: "Home", href: "/home", icon: HomeIcon, current: true },
   {
     name: "Documents",
-    path: "/documents",
+    href: "/documents",
     icon: DocumentDuplicateIcon,
     current: false,
   },
-  { name: "Report", path: "/report", icon: ChartPieIcon, current: false },
-  { name: "Contact", path: "/contact", icon: UsersIcon, current: false },
+  { name: "Report", href: "/report", icon: ChartPieIcon, current: false },
+  { name: "Contact", href: "/contact", icon: UsersIcon, current: false },
 ];
 const teams = [
   { id: 1, name: "Eingang", href: "#", initial: "M", current: false },
 ];
-const userNavigation = [{ name: "Sign out", path: "/#" }];
+const userNavigation = [{ name: "Sign out", href: "#" }];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -116,8 +116,8 @@ export default function Navbar() {
                           <ul role="list" className="-mx-2 space-y-1">
                             {navigation.map((item) => (
                               <li key={item.name}>
-                                <a
-                                  href={item.href}
+                                <Link
+                                  to={item.href}
                                   className={classNames(
                                     item.current
                                       ? "bg-gray-800 text-white"
@@ -130,7 +130,7 @@ export default function Navbar() {
                                     aria-hidden="true"
                                   />
                                   {item.name}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>
@@ -162,7 +162,7 @@ export default function Navbar() {
           className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col position: absolute;
 "
         >
-          {/* Sidebar component, swap this element with another sidebar if you like */}
+          {/* Sidebar component,  */}
           <div className=" flex grow flex-col gap-y-20  overflow-y-auto bg-slate-800 px-6 pb-4">
             <div className="flex h-16 shrink-0 items-center">
               <Link to="/home">

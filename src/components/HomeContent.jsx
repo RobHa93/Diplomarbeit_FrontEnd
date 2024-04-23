@@ -17,7 +17,7 @@ function HomeContent() {
             <Link to="/search">
               <img
                 className="href={#} hover:opacity-70 shadow-xl  aspect-[3/2] w-full rounded-2xl object-fill"
-                src="./src/assets/img/search-icon-vector.jpg"
+                src="/src/assets/img/search-icon-vector.jpg"
                 alt="search-icon"
               ></img>
             </Link>
@@ -31,7 +31,7 @@ function HomeContent() {
             <Link to="/documents">
               <img
                 className="href={#} hover:opacity-70 shadow-xl  aspect-[3/2] w-full rounded-2xl object-fill"
-                src="./src/assets/img/vector-documents-icon.jpg"
+                src="/src/assets/img/vector-documents-icon.jpg"
                 alt="documents-icon"
               ></img>
             </Link>

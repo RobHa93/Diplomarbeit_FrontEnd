@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 
 const docs = [
-  { name: "WE", type: "NFM ", file: "doc" },
-  { name: "WE", type: "NFM MDW", file: "doc" },
-  { name: "WE", type: "NFMJ", file: "doc" },
-  { name: "WE", type: "MD", file: "doc" },
-  { name: "WE", type: "Varitex V5", file: "doc" },
-  { name: "WE", type: "Varitex V5 J", file: "doc" },
-  { name: "WE", type: "NF", file: "doc" },
-  { name: "WE", type: "NF53", file: "doc" },
-  { name: "WE", type: "NFRE", file: "doc" },
-  { name: "WE", type: "NFRE", file: "doc" },
-  { name: "WE", type: "NG", file: "doc" },
-  { name: "SCH", type: "MBJ8V", file: "doc" },
-  { name: "SCH", type: "MBJ8 ", file: "doc" },
-  { name: "SCH", type: "MBJ8 MDW ", file: "doc" },
-  { name: "SCH", type: "MBJL6 ", file: "doc" },
-  { name: "SCH", type: "MVC 2.8 ", file: "doc" },
-  { name: "SCH", type: "MÜSONIC3 ", file: "doc" },
+  { name: "WE", type: "NFM ", url: "../assets/pdf/var_let.pdf" },
+  { name: "WE", type: "NFM MDW", url: "../pdf/var_let.pdf" },
+  { name: "WE", type: "NFMJ", url: "../pdf/var_let.pdf" },
+  { name: "WE", type: "MD", url: "../pdf/var_let.pdf" },
+  { name: "WE", type: "Varitex V5", url: "../pdf/var_let.pdf" },
+  { name: "WE", type: "Varitex V5 J", url: "../pdf/var_let.pdf" },
+  { name: "WE", type: "NF", url: "../pdf/var_let.pdf" },
+  { name: "WE", type: "NF53", url: "../pdf/var_let.pdf" },
+  { name: "WE", type: "NFRE", url: "../pdf/var_let.pdf" },
+  { name: "WE", type: "NFRE", url: "../pdf/var_let.pdf" },
+  { name: "WE", type: "NG", url: "../pdf/var_let.pdf" },
+  { name: "SCH", type: "MBJ8V", url: "../pdf/var_let.pdf" },
+  { name: "SCH", type: "MBJ8 ", url: "../pdf/var_let.pdf" },
+  { name: "SCH", type: "MBJ8 MDW ", url: "../pdf/var_let.pdf" },
+  { name: "SCH", type: "MBJL6 ", url: "../pdf/var_let.pdf" },
+  { name: "SCH", type: "MVC 2.8 ", url: "../pdf/var_let.pdf" },
+  { name: "SCH", type: "MÜSONIC3 ", url: "../pdf/var_let.pdf" },
 ];
 
 function DocumentsTable() {
@@ -99,7 +99,13 @@ function DocumentsTable() {
                         {doc.type}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        {doc.file}
+                        <a
+                          href={doc.url}
+                          download
+                          className=" m-1 border-red-600 text-orange-600 hover:bg-red-600 hover:text-white"
+                        >
+                          Download PDF
+                        </a>
                       </td>
                     </tr>
                   ))}

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
 
 function ReportForm() {
   const [formData, setFormData] = useState({
@@ -15,16 +16,24 @@ function ReportForm() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleImageUpload = (e) => {
-    const files = Array.from(e.target.files);
-    setFormData({ ...formData, images: files });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Noch Funktion einfügen für das senden der Formulardaten ( jsmail-com??)
-    console.log(formData);
-    // Email senden funktion einfügen (neues Konto erstellen?)
+    // Senden der E-Mail über EmailJS
+    emailjs
+      .sendForm(
+        "service_ar0p7pa",
+        "template_skte65k",
+        e.target,
+        "OrtfcsERrzdzN7VOh"
+      )
+      .then(
+        (result) => {
+          console.log("E-Mail erfolgreich gesendet:", result.text);
+        },
+        (error) => {
+          console.error("Fehler beim Senden der E-Mail:", error.text);
+        }
+      );
   };
 
   return (
@@ -115,23 +124,7 @@ function ReportForm() {
               className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm h-[200px]"
             />
           </div>
-          <div>
-            <label
-              htmlFor="images"
-              className="block text-sm font-medium text-gray-700"
-            >
-              Upload Image
-            </label>
-            <input
-              type="file"
-              id="images"
-              name="images"
-              accept="image/*"
-              multiple
-              onChange={handleImageUpload}
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-            />
-          </div>
+
           <div>
             <button
               type="submit"

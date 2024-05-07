@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const docs = [
-  { name: "WE", type: "NFM ", url: "../assets/pdf/var_let.pdf" },
+  { name: "WE", type: "NFM ", url: "./assets/pdf/var_let.pdf" },
   { name: "WE", type: "NFM MDW", url: "../pdf/var_let.pdf" },
   { name: "WE", type: "NFMJ", url: "../pdf/var_let.pdf" },
   { name: "WE", type: "MD", url: "../pdf/var_let.pdf" },
@@ -99,13 +99,11 @@ function DocumentsTable() {
                         {doc.type}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        <a
-                          href={doc.url}
-                          download
-                          className=" m-1 border-red-600 text-orange-600 hover:bg-red-600 hover:text-white"
-                        >
-                          Download PDF
-                        </a>
+                        <button className=" m-1 border-red-600 text-orange-600 hover:bg-red-600 hover:text-white ">
+                          <a href={doc.url} download>
+                            Download PDF
+                          </a>
+                        </button>
                       </td>
                     </tr>
                   ))}

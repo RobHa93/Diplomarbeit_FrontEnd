@@ -1,23 +1,38 @@
 import React, { useState } from "react";
+import pdf1 from "../assets/pdf/NFM.pdf";
+import pdf2 from "../assets/pdf/NFM_MDW.pdf";
+import pdf3 from "../assets/pdf/NFMJ.pdf";
+import pdf4 from "../assets/pdf/MD.pdf";
+import pdf5 from "../assets/pdf/Varitex_V5.pdf";
+import pdf6 from "../assets/pdf/Varitex_V5J.pdf";
+import pdf7 from "../assets/pdf/NF.pdf";
+import pdf8 from "../assets/pdf/NF53_VLAL.pdf";
+import pdf9 from "../assets/pdf/NFRE.pdf";
+import pdf10 from "../assets/pdf/NG3.pdf";
+import pdf11 from "../assets/pdf/MBJ8.pdf";
+import pdf12 from "../assets/pdf/MBJ8V.pdf";
+import pdf13 from "../assets/pdf/MBJ8V_MDW.pdf";
+import pdf14 from "../assets/pdf/MBJL6.pdf";
+import pdf15 from "../assets/pdf/MVC_2.8.pdf";
+import pdf16 from "../assets/pdf/MUESONIC3.pdf";
 
 const docs = [
-  { name: "WE", type: "NFM ", url: "./assets/pdf/var_let.pdf" },
-  { name: "WE", type: "NFM MDW", url: "../pdf/var_let.pdf" },
-  { name: "WE", type: "NFMJ", url: "../pdf/var_let.pdf" },
-  { name: "WE", type: "MD", url: "../pdf/var_let.pdf" },
-  { name: "WE", type: "Varitex V5", url: "../pdf/var_let.pdf" },
-  { name: "WE", type: "Varitex V5 J", url: "../pdf/var_let.pdf" },
-  { name: "WE", type: "NF", url: "../pdf/var_let.pdf" },
-  { name: "WE", type: "NF53", url: "../pdf/var_let.pdf" },
-  { name: "WE", type: "NFRE", url: "../pdf/var_let.pdf" },
-  { name: "WE", type: "NFRE", url: "../pdf/var_let.pdf" },
-  { name: "WE", type: "NG", url: "../pdf/var_let.pdf" },
-  { name: "SCH", type: "MBJ8V", url: "../pdf/var_let.pdf" },
-  { name: "SCH", type: "MBJ8 ", url: "../pdf/var_let.pdf" },
-  { name: "SCH", type: "MBJ8 MDW ", url: "../pdf/var_let.pdf" },
-  { name: "SCH", type: "MBJL6 ", url: "../pdf/var_let.pdf" },
-  { name: "SCH", type: "MVC 2.8 ", url: "../pdf/var_let.pdf" },
-  { name: "SCH", type: "MÜSONIC3 ", url: "../pdf/var_let.pdf" },
+  { name: "WE", type: "NFM ", url: pdf1 },
+  { name: "WE", type: "NFM MDW", url: pdf2 },
+  { name: "WE", type: "NFMJ", url: pdf3 },
+  { name: "WE", type: "MD", url: pdf4 },
+  { name: "WE", type: "Varitex V5", url: pdf5 },
+  { name: "WE", type: "Varitex V5 J", url: pdf6 },
+  { name: "WE", type: "NF", url: pdf7 },
+  { name: "WE", type: "NF53 VL/AL", url: pdf8 },
+  { name: "WE", type: "NFRE", url: pdf9 },
+  { name: "WE", type: "NG3", url: pdf10 },
+  { name: "SCH", type: "MBJ8V", url: pdf11 },
+  { name: "SCH", type: "MBJ8 ", url: pdf12 },
+  { name: "SCH", type: "MBJ8 MDW ", url: pdf13 },
+  { name: "SCH", type: "MBJL6 ", url: pdf14 },
+  { name: "SCH", type: "MVC 2.8 ", url: pdf15 },
+  { name: "SCH", type: "MÜSONIC3 ", url: pdf16 },
 ];
 
 function DocumentsTable() {
@@ -34,7 +49,7 @@ function DocumentsTable() {
   return (
     <div className="px-4 lg:px-8 lg:ml-[300px]">
       <div className="sm:flex sm:items-center">
-        <div className="sm:flex-auto">
+        <div className="sm:flex-auto space-x-4 ">
           <h1 className=" text-center font-bold text-3xl leading-6 text-red-500 mb-10">
             Machines
           </h1>
@@ -99,10 +114,11 @@ function DocumentsTable() {
                         {doc.type}
                       </td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                        <button className=" m-1 border-red-600 text-orange-600 hover:bg-red-600 hover:text-white ">
-                          <a href={doc.url} download>
-                            Download PDF
-                          </a>
+                        <button
+                          className="m-1 border-red-600 text-orange-600 hover:bg-red-600 hover:text-white"
+                          onClick={() => window.open(doc.url, "_blank")}
+                        >
+                          Open PDF
                         </button>
                       </td>
                     </tr>

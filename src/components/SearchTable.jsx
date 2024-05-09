@@ -1,30 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SearchTable = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchResult, setSearchResult] = useState(null);
+  const [error, setError] = useState(null);
+
+  const handleSearch = async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:4000/api/v1/machines/${searchTerm}`
+      );
+      if (response.ok) {
+        const data = await response.json();
+        setSearchResult(data);
+        setError(null);
+      } else {
+        const errorMessage = await response.text();
+        setError(errorMessage);
+        setSearchResult(null);
+      }
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      setError("Error fetching data. Please try again later.");
+      setSearchResult(null);
+    }
+  };
+
   return (
-    <div className="overflow-x-auto border-x border-t lg:ml-[400px] sm:ml-10 md:mr-10 mx-4 mt-20">
-      <table className="table-auto w-full">
-        <thead className="border-b">
-          <tr className="bg-gray-100">
-            <th className="text-left p-4 font-medium">Error-Code</th>
-            <th className="text-left p-4 font-medium">Error-Name</th>
-            <th className="text-left p-4 font-medium">Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="border-b hover:bg-gray-50">
-            <td className="p-4 ">803</td>
-            <td className="p-4">ERROR_YARN_IS_BROKEN</td>
-            <button className="m-4">Description</button>
-          </tr>
-          <tr className="border-b hover:bg-gray-50">
-            <td className="p-4">804</td>
-            <td className="p-4">ERROR_PRE_WINDER_IS_RUNNING_EMPTY</td>
-            <button className="m-4">Description</button>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <>
+      <div className="mt-6 placeholder:text-gray-400 flex items-center lg:ml-[400px] md:max-w-[70%] sm:ml-10 md:mr-10 mx-4">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Enter machine number..."
+          className="block w-full rounded-md border-0 py-1.5 pr-14 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+        />
+        <button
+          onClick={handleSearch}
+          className="ml-2 bg-indigo-600 text-white px-4 py-1.5 rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          Search
+        </button>
+      </div>
+
+      {error && <p className="text-red-500">{error}</p>}
+
+      <div className="mt-20 placeholder:text-gray-400 flex items-center lg:ml-[400px] md:max-w-[70%] sm:ml-10 md:mr-10 mx-4">
+        <table className="table-auto w-full">
+          <thead className="border-b">
+            <tr className="bg-gray-100">
+              <th className="text-left p-4 font-medium">Error-Code</th>
+              <th className="text-left p-4 font-medium">Error-Name</th>
+              <th className="text-left p-4 font-medium">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {searchResult && (
+              <tr>
+                <td className="text-left p-4">{searchResult.number}</td>
+                <td className="text-left p-4">{searchResult.name}</td>
+                <td className="text-left p-4">{searchResult.description}</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 };
 

@@ -8,7 +8,7 @@ const SearchTable = () => {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `http://localhost:4000/api/v1/machines/${searchTerm}`
+        `http://localhost:4001/api/v1/machines/search/${searchTerm}`
       );
       if (response.ok) {
         const data = await response.json();
@@ -28,7 +28,7 @@ const SearchTable = () => {
 
   return (
     <>
-      <div className="mt-6 placeholder:text-gray-400 flex items-center lg:ml-[400px] md:max-w-[70%] sm:ml-10 md:mr-10 mx-4">
+      <div className="mt-6 placeholder:text-gray-400 flex items-center lg:ml-[400px] w-80 sm:ml-10 md:mr-10 mx-4">
         <input
           type="text"
           value={searchTerm}

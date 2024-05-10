@@ -7,6 +7,7 @@ import Search from "./pages/Search.jsx";
 import NoPage from "./pages/NoPage.jsx";
 import Impressum from "./pages/Impressum.jsx";
 import Version from "./pages/Version.jsx";
+import SignIn from "./pages/SignIn.jsx";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/version" element={<Version />} />
           <Route path="*" element={<NoPage />} />
+          <Route path="/signIn" element={<SignIn />} />
         </Routes>
       </BrowserRouter>
     </div>

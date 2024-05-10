@@ -28,12 +28,15 @@ const SearchTable = () => {
 
   return (
     <>
+      <h1 className="  text-red-500 text-3xl font-bold lg:ml-[400px] mb-28 mt-12 text-center">
+        Search your Error-Code
+      </h1>
       <div className="mt-6 placeholder:text-gray-400 flex items-center lg:ml-[400px] w-80 sm:ml-10 md:mr-10 mx-4">
         <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Enter machine number..."
+          placeholder="Enter Error-Code..."
           className="block w-full rounded-md border-0 py-1.5 pr-14 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
         />
         <button

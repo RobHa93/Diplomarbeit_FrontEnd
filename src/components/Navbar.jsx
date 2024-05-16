@@ -1,6 +1,6 @@
-import { Fragment, useState } from "react";
+import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
-import { Dialog, Menu, Transition } from "@headlessui/react";
+import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
   ChartPieIcon,
@@ -13,7 +13,6 @@ import {
 
 export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-
   const [isOpen, setIsOpen] = useState(false);
 
   const handleMouseEnter = () => {
@@ -24,6 +23,13 @@ export default function Navbar() {
     setIsOpen(false);
   };
 
+  const handleLogout = () => {
+    // Lösche das Token aus dem lokalen Speicher
+    localStorage.removeItem("token");
+
+    // Weiterleitung zur Anmeldeseite
+    window.location.href = "/signIn";
+  };
   return (
     <>
       <div>
@@ -169,6 +175,14 @@ export default function Navbar() {
                           </ul>
                         </details>
                       </ul>
+                      <ul>
+                        <li
+                          className="group flex gap-x-3 rounded-md mb-10 p-2 text-sm leading-6 font-semibold  text-gray-400 hover:bg-gray-800 hover:text-white"
+                          onClick={handleLogout}
+                        >
+                          Logout
+                        </li>
+                      </ul>
                     </nav>
                   </div>
                 </Dialog.Panel>
@@ -269,6 +283,14 @@ export default function Navbar() {
                     </li>
                   </ul>
                 </details>
+              </ul>
+              <ul>
+                <li
+                  className="group flex gap-x-3 rounded-md mb-10 p-2 text-sm leading-6 font-semibold  text-gray-400 hover:bg-gray-800 hover:text-white"
+                  onClick={handleLogout}
+                >
+                  Logout
+                </li>
               </ul>
             </nav>
           </div>

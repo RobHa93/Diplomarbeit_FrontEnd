@@ -12,11 +12,11 @@ function HomeContent() {
             Select a Machine type bellow.
           </p>
         </div>
-        <div className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2s">
+        <div className="mx-auto mt-20 grid max-w-2xl grid-cols-1  gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-2s">
           <div>
             <Link to="/search">
               <img
-                className="href={#} hover:opacity-70 shadow-xl  aspect-[3/2] w-full rounded-2xl object-fill"
+                className="href={#} hover:opacity-70 shadow-xl  mx-auto h-[200px] w-[200px] rounded-2xl object-fill"
                 src="/src/assets/img/search-icon-vector.jpg"
                 alt="search-icon"
               ></img>
@@ -30,7 +30,7 @@ function HomeContent() {
           <div>
             <Link to="/documents">
               <img
-                className="href={#} hover:opacity-70 shadow-xl  aspect-[3/2] w-full rounded-2xl object-fill"
+                className="href={#} hover:opacity-70 shadow-xl mx-auto h-[200px] w-[200px] rounded-2xl object-fill"
                 src="/src/assets/img/vector-documents-icon.jpg"
                 alt="documents-icon"
               ></img>

@@ -37,11 +37,11 @@ function ReportForm() {
   };
 
   return (
-    <>
-      <h1 className="  text-red-500 text-3xl font-bold lg:ml-[400px] mb-12 text-center">
-        Please fill out your report{" "}
+    <div className="px-4 lg:px-8  md:ml-0">
+      <h1 className=" text-3xl font-bold tracking-tight text-red-500 sm:text-4xl text-center mb-20">
+        Report{" "}
       </h1>
-      <div className="max-w-lg mx-auto">
+      <div className="max-w-lg mx-auto ">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label
@@ -135,7 +135,7 @@ function ReportForm() {
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 }
 

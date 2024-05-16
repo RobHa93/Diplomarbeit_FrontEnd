@@ -6,15 +6,15 @@ const Version = () => {
     <>
       <Navbar />
 
-      <div className=" lg:ml-[400px] sm:ml-10 text-center">
-        <h1 className=" text-red-500 text-3xl font-bold  mb-20">
+      <div className=" lg:ml-[400px] sm:ml-10">
+        <h1 className=" text-red-500 text-3xl font-bold text-center">
           Software Information
         </h1>
         <div>
-          <p className=" my-8 mr-8 underline">Version Info:</p>
-          <p className=" my-8 mr-8">Developer : Robin Hasler</p>
-          <p className=" my-8 mr-8">Release Date : 06/2024</p>
-          <p className=" my-8 mr-8">Current Version : 1.0</p>
+          <p className=" mb-5 mt-20 mr-8 font-bold underline">Version Info:</p>
+          <p className=" my-5 mr-8 font-bold">Developer : Robin Hasler</p>
+          <p className=" my-5 mr-8 font-bold">Release Date : 06/2024</p>
+          <p className=" my-5 mr-8 font-bold">Current Version : 1.0</p>
         </div>
       </div>
     </>

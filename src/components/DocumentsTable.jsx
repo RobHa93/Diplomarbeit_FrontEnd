@@ -50,7 +50,7 @@ function DocumentsTable() {
     <div className="px-4 lg:px-8 lg:ml-[300px]">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto space-x-4 ">
-          <h1 className=" text-center font-bold text-3xl leading-6 text-red-500 mb-10">
+          <h1 className=" text-3xl font-bold tracking-tight text-red-500 sm:text-4xl text-center">
             Machines
           </h1>
           <p className="my-6  text-gray-700 text-center">

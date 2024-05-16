@@ -18,9 +18,12 @@ const Impressum = () => {
           <li className=" my-5 mr-8 font-bold">Tel: +41 62 865 51 11</li>
           <li className=" my-5 mr-8 font-bold">Email: jmf@mueller-frick.com</li>
         </ul>
-        <p> Manager / CEO : MR Andreas Conzelmann (CEO) </p>
+        <p className="font-bold">
+          {" "}
+          Manager / CEO : MR Andreas Conzelmann (CEO){" "}
+        </p>
         <br />
-        <p className=" mr-16">
+        <p className=" mr-16 font-bold">
           &copy; 2024, Jakob Müller AG Frick, All rights reserved. <br />
           Any reproduction or further distribution in any medium as a whole or
           in parts requires the written consent of Jakob Müller AG.

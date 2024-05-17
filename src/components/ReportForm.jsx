@@ -29,6 +29,16 @@ function ReportForm() {
       .then(
         (result) => {
           console.log("E-Mail erfolgreich gesendet:", result.text);
+          alert("E-Mail erfolgreich gesendet!");
+          // Formular zurücksetzen
+          setFormData({
+            name: "",
+            department: "",
+            machineType: "",
+            errorCode: "",
+            description: "",
+            images: [],
+          });
         },
         (error) => {
           console.error("Fehler beim Senden der E-Mail:", error.text);

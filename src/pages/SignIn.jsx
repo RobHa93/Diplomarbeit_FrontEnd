@@ -10,7 +10,7 @@ export default function SignIn() {
     e.preventDefault();
     console.log("Form submitted");
     console.log("Username:", username);
-    console.log("Password:", password);
+
     try {
       const response = await axios.post(
         "http://localhost:4001/api/v1/users/login",

@@ -198,11 +198,7 @@ export default function Navbar() {
           <div className=" flex grow flex-col gap-y-20  overflow-y-auto bg-slate-800 px-6 pb-4">
             <div className="flex h-16 shrink-0 items-center">
               <Link to="/home">
-                <img
-                  className="mt-7 h-10 w-auto"
-                  src="./src/assets/img/jako-mueller.svg"
-                  alt="Company"
-                />
+                <img className="mt-7 h-10 w-auto" src={jmimage} alt="Company" />
               </Link>
             </div>
             <nav className="flex flex-1 flex-col">

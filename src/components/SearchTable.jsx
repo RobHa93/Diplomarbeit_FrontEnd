@@ -5,7 +5,7 @@ const SearchTable = () => {
   const [searchResult, setSearchResult] = useState(null);
   const [error, setError] = useState(null);
 
-  const backendURL = "https://Diplomarbeit-IBAW.onrender.com";
+  const backendURL = "https://diplomarbeit-ibaw.onrender.com";
 
   async function fetchData() {
     try {
@@ -22,7 +22,7 @@ const SearchTable = () => {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `https://Diplomarbeit-IBAW.onrender.com/api/v1/machines/search/${searchTerm}`
+        `https://diplomarbeit-ibaw.onrender.com/api/v1/machines/search/${searchTerm}`
       );
       if (response.ok) {
         const data = await response.json();

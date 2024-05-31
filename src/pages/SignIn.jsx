@@ -6,7 +6,7 @@ export default function SignIn() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const backendURL = "https://Diplomarbeit-IBAW.onrender.com";
+  const backendURL = "https://diplomarbeit-ibaw.onrender.com";
 
   async function fetchData() {
     try {
@@ -27,7 +27,7 @@ export default function SignIn() {
 
     try {
       const response = await axios.post(
-        "https://Diplomarbeit-IBAW.onrender.com/api/v1/users/login",
+        "https://diplomarbeit-ibaw.onrender.com/api/v1/users/login",
         {
           username,
           password,

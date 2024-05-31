@@ -8,7 +8,7 @@ const SearchTable = () => {
   const handleSearch = async () => {
     try {
       const response = await fetch(
-        `http://localhost:4001/api/v1/machines/search/${searchTerm}`
+        `https://Diplomarbeit-IBAW.onrender.com/api/v1/machines/search/${searchTerm}`
       );
       if (response.ok) {
         const data = await response.json();

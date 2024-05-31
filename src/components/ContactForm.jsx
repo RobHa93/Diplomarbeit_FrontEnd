@@ -1,4 +1,5 @@
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import jmImage from "../assets/img/jakob_mller_ag_frick_logo.jpg";
 
 const company = [
   {
@@ -7,7 +8,7 @@ const company = [
     adress: "5070 Frick",
     email: "jmf@mueller-frick.com",
     telephone: "+41 62 8655 111",
-    image: "./src/assets/img/jakob_mller_ag_frick_logo.jpg",
+    image: { jmImage },
   },
   {
     name: "Jakob Müller Deutschland ",
@@ -15,7 +16,7 @@ const company = [
     adress: "58332 Schwelm",
     email: "jmd@mueller-frick.com",
     telephone: "+49 23 36 47 99 0",
-    image: "./src/assets/img/jakob_mller_ag_frick_logo.jpg",
+    image: { jmImage },
   },
 
   {
@@ -24,7 +25,7 @@ const company = [
     adress: "432 01 Kadaň",
     email: "jmcr@mueller-frick.com",
     telephone: "+420 474 35 99 20",
-    image: "./src/assets/img/jakob_mller_ag_frick_logo.jpg",
+    image: { jmImage },
   },
   {
     name: "Jakob Müller Machinery (China) Co. Ltd.",
@@ -32,7 +33,7 @@ const company = [
     adress: "Suzhou New District, Jiangsu Province",
     email: "jmc@mueller-frick.com",
     telephone: "+86 512 65366 370",
-    image: "./src/assets/img/jakob_mller_ag_frick_logo.jpg",
+    image: { jmImage },
   },
   {
     name: "Jakob Müller Nippon K.K.",
@@ -40,7 +41,7 @@ const company = [
     adress: "Fukui 918-8239",
     email: "jmn@mueller-frick.com",
     telephone: "+81 776 27 66 53",
-    image: "./src/assets/img/jakob_mller_ag_frick_logo.jpg",
+    image: { jmImage },
   },
   {
     name: "Jakob Müller Brasil Ltda.",
@@ -48,7 +49,7 @@ const company = [
     adress: "São Paulo 04709-110 ",
     email: "jmb@mueller-frick.com",
     telephone: "+55 11 5186 95 00",
-    image: "./src/assets/img/jakob_mller_ag_frick_logo.jpg",
+    image: { jmImage },
   },
 ];
 

@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import searchImage from "../assets/img/search-icon-vector.jpg";
+import vectorImage from "../assets/img/vector-documents-icon.jpg";
 
 function HomeContent() {
   return (
@@ -17,7 +19,7 @@ function HomeContent() {
             <Link to="/search">
               <img
                 className="href={#} hover:opacity-70 shadow-xl  mx-auto h-[200px] w-[200px] rounded-2xl object-fill"
-                src="/src/assets/img/search-icon-vector.jpg"
+                src={searchImage}
                 alt="search-icon"
               ></img>
             </Link>
@@ -31,7 +33,7 @@ function HomeContent() {
             <Link to="/documents">
               <img
                 className="href={#} hover:opacity-70 shadow-xl mx-auto h-[200px] w-[200px] rounded-2xl object-fill"
-                src="/src/assets/img/vector-documents-icon.jpg"
+                src={vectorImage}
                 alt="documents-icon"
               ></img>
             </Link>

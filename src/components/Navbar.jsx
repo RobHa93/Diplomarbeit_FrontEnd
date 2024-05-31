@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Link } from "react-router-dom";
+import jmimage from "../assets/img/jakob_mller_ag_frick_logo.jpg";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -90,7 +91,7 @@ export default function Navbar() {
                       <Link to="/home">
                         <img
                           className="h-10 w-auto"
-                          src="./src/assets/img/jako-mueller.svg"
+                          src={jmimage}
                           alt="Your Company"
                         />
                       </Link>

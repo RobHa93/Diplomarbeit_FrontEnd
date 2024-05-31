@@ -54,7 +54,7 @@ export default function App() {
           {/* Anmeldeseite */}
           <Route path="/signIn" element={<SignIn />} />
           {/* Standardseite für 404 */}
-          <Route path="*" element={<NoPage />} />
+          <Route path="*" element={<SignIn />} />
         </Routes>
       </BrowserRouter>
     </div>

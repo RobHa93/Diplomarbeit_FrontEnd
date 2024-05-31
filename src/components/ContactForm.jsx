@@ -72,7 +72,7 @@ function ContactForm() {
             <div className="flex flex-1 flex-col p-8">
               <img
                 className="mx-auto h-32 w-32 flex-shrink-0 rounded-full"
-                src={location.image}
+                src={jmimage}
                 alt=""
               />
               <h3 className="mt-6 text-sm font-medium text-gray-900">

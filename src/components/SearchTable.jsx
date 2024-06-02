@@ -7,18 +7,6 @@ const SearchTable = () => {
 
   const backendURL = "https://diplomarbeit-ibaw.onrender.com";
 
-  async function fetchData() {
-    try {
-      const response = await fetch(`${backendURL}/api/v1/users`);
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  }
-
-  fetchData();
-
   const handleSearch = async () => {
     try {
       const response = await fetch(

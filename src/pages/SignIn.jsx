@@ -6,20 +6,6 @@ export default function SignIn() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const backendURL = "https://diplomarbeit-ibaw.onrender.com";
-
-  async function fetchData() {
-    try {
-      const response = await fetch(`${backendURL}/api/v1/users`);
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  }
-
-  fetchData();
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Form submitted");

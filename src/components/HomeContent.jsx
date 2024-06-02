@@ -4,8 +4,8 @@ import vectorImage from "../assets/img/vector-documents-icon.jpg";
 
 function HomeContent() {
   return (
-    <div className=" bg-white  ">
-      <div className=" lg:ml-[400px] max-w-4xl px-6 lg:px-8 text-center sm:mx-auto">
+    <div className=" bg-white px-4 lg:px-8 lg:ml-[400px] md:ml-0 ">
+      <div className="  max-w-4xl px-6 lg:px-8 text-center sm:mx-auto">
         <div className="mx-auto max-w-7xl lg:mx-0 ">
           <h2 className=" text-3xl font-bold tracking-tight text-red-500 sm:text-4xl text-center">
             Service Tool JMF

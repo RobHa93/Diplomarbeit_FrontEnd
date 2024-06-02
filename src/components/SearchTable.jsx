@@ -51,7 +51,7 @@ const SearchTable = () => {
 
       {error && <p className="text-red-500">{error}</p>}
 
-      <div className="mt-20 placeholder:text-gray-400 flex items-center lg:ml-[400px] md:max-w-[70%] sm:ml-10 md:mr-10 mx-4">
+      <div className="mt-20 placeholder:text-gray-400 flex items-center lg:ml-[400px] md:max-w-[80%] sm:ml-10 md:mr-10 mx-4">
         <table className="table-auto w-full">
           <thead className="border-b">
             <tr className="bg-gray-100">

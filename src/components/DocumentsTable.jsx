@@ -47,7 +47,7 @@ function DocumentsTable() {
   };
 
   return (
-    <div className="px-4 lg:px-8 lg:ml-[300px]">
+    <div className="px-4 lg:px-8 lg:ml-[400px] md:ml-0">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto space-x-4 ">
           <h1 className=" text-3xl font-bold tracking-tight text-red-500 sm:text-4xl text-center">

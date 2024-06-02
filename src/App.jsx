@@ -53,7 +53,7 @@ export default function App() {
           />
           {/* Anmeldeseite */}
           <Route path="/signIn" element={<SignIn />} />
-          {/* Standardseite für 404 */}
+          {/* Standardseite  */}
           <Route path="*" element={<SignIn />} />
         </Routes>
       </BrowserRouter>

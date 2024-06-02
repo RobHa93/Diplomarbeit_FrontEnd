@@ -11,20 +11,20 @@ function ReportForm() {
     images: [],
   });
 
+  // Funktion zur Verarbeitung der Eingabefelder
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
+  // Senden der E-Mail über EmailJS + Login und Schema Daten EmailJS
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Senden der E-Mail über EmailJS
     emailjs
       .sendForm(
-        "service_ar0p7pa",
-        "template_skte65k",
+        "service_ar0p7pa", // ID des EmailJS-Service
+        "template_skte65k", // ID der EmailJS-Vorlage
         e.target,
-        "OrtfcsERrzdzN7VOh"
+        "OrtfcsERrzdzN7VOh" // EmailJS Benutzer-ID
       )
       .then(
         (result) => {
@@ -41,6 +41,7 @@ function ReportForm() {
           });
         },
         (error) => {
+          // Fehlernachricht in der Konsole
           console.error("Fehler beim Senden der E-Mail:", error.text);
         }
       );

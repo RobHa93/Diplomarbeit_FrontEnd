@@ -16,16 +16,18 @@ export default function Navbar() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  // Verhalten für Dropdown beim Hover
   const handleMouseEnter = () => {
     setIsOpen(true);
   };
 
+  // Verhalten für Dropdown beim verlassen des Hover
   const handleMouseLeave = () => {
     setIsOpen(false);
   };
 
+  // Löschen des Token aus dem lokalen Speicher
   const handleLogout = () => {
-    // Lösche das Token aus dem lokalen Speicher
     localStorage.removeItem("token");
 
     // Weiterleitung zur Anmeldeseite

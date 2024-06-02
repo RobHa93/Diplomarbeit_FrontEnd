@@ -1,27 +1,35 @@
 import React, { useState } from "react";
 
 const SearchTable = () => {
+  // searchTerm speichert den aktuellen Suchbegriff
+  // searchResult speichert das Ergebnis der Suche
+  // error speichert Fehlermeldungen, falls welche auftreten
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState(null);
   const [error, setError] = useState(null);
 
   const backendURL = "https://diplomarbeit-ibaw.onrender.com";
 
+  // Asynchrone Funktion, die ausgeführt wird, wenn eine Suche ausgelöst wird
   const handleSearch = async () => {
     try {
       const response = await fetch(
         `https://diplomarbeit-ibaw.onrender.com/api/v1/machines/search/${searchTerm}`
       );
       if (response.ok) {
+        // Wenn ja, die Antwort in JSON umwandeln und das Suchergebnis speichern
+
         const data = await response.json();
         setSearchResult(data);
         setError(null);
       } else {
+        // Wenn nein, die Fehlermeldung aus der Antwort lesen und speichern
         const errorMessage = await response.text();
         setError(errorMessage);
         setSearchResult(null);
       }
     } catch (error) {
+      // Beim auftreten eines Fehlers während des Abrufs, Fehler im Zustand speichern
       console.error("Error fetching data:", error);
       setError("Error fetching data. Please try again later.");
       setSearchResult(null);

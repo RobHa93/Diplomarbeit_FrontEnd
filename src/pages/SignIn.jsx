@@ -2,11 +2,16 @@ import React, { useState } from "react";
 import axios from "axios";
 
 export default function SignIn() {
+  // username speichert den Benutzernamen
+  // password speichert das Passwort
+  // error speichert Fehlermeldungen, falls welche auftreten
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
+  // Funktion zur Verarbeitung des Formulars beim senden
   const handleSubmit = async (e) => {
+    // Verhindert das die Seite neu geladen wird
     e.preventDefault();
     console.log("Form submitted");
     console.log("Username:", username);
@@ -19,12 +24,14 @@ export default function SignIn() {
           password,
         }
       );
+      // Extrahieren des Tokens aus der Antwort
       const token = response.data.token;
       localStorage.setItem("token", token);
 
       // Weiterleitung zur Startseite, wenn die Anmeldung erfolgreich ist
       window.location.href = "/home";
     } catch (error) {
+      // Bei einem Fehler während der Anmeldung, Fehler im Zustand speichern
       console.error("Fehler beim Anmelden:", error);
       setError(error.response.data.message);
     }
@@ -36,6 +43,7 @@ export default function SignIn() {
     if (token) {
       window.location.href = "/home";
     }
+    // Leeres Array bedeutet, dass dieser Effekt nur einmal beim ersten Rendern ausgeführt wird
   }, []);
 
   return (

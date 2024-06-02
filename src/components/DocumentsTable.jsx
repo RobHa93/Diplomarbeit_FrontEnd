@@ -37,7 +37,7 @@ const docs = [
 
 function DocumentsTable() {
   const [documents, setDocuments] = useState(docs);
-
+  // Filterfunktion für Dokumente
   const filterByName = (name) => {
     if (name === "All") {
       setDocuments(docs);
@@ -57,18 +57,21 @@ function DocumentsTable() {
             A list of all the Machine-Documentation in your search.
           </p>
           <button
+            // Filterfunktion für ALLE Dokumente
             onClick={() => filterByName("All")}
             className="m-1 border-red-600 text-orange-600 hover:bg-red-600 hover:text-white"
           >
             All
           </button>
           <button
+            // Filterfunktion für SCH Dokumente
             onClick={() => filterByName("SCH")}
             className=" m-1 border-red-600 text-red-600 hover:bg-red-600 hover:text-white"
           >
             SCH
           </button>
           <button
+            // Filterfunktion für WE Dokumente
             onClick={() => filterByName("WE")}
             className="m-1 border-red-600 text-orange-600 hover:bg-red-600 hover:text-white"
           >

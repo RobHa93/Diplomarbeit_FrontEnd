@@ -14,7 +14,7 @@ https://roha-ibaw.onrender.com/ )
 
 ## Nächste Schritte um die Applikation zu benutzen:
 
-Im Projekt Terminal können Sie:
+Verwenden Sie im Projekt Terminal:
 
 ### `npm run dev`
 

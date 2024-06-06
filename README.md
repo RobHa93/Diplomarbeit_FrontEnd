@@ -1,6 +1,13 @@
 # React + Vite
 
-## Available Scripts
+## First steps
+
+Download Zip File from Github
+
+### `npm i`
+to Download all the dependencies.
+
+## Next to use the Application 
 
 In the project directory, you can run:
 

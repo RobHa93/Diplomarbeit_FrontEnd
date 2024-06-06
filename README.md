@@ -1,35 +1,28 @@
 # React + Vite
 
-## First steps
+## Erste Schritte
 
-Download Zip File from Github
+Download Zip File von Github
 
 ### `npm i`
-to Download all the dependencies.
+Um alle dependencies zu installieren.
 
 
-( Start Render Application 
+( Start der Render Applikation 
 https://roha-ibaw.onrender.com/ )
 
 
-## Next to use the Application 
+## Nächste Schritte um die Applikation zu benutzen:
 
-In the project directory, you can run:
+Im Projekt Terminal können Sie:
 
 ### `npm run dev`
 
-Runs the app in the development mode.\
-Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+Startet die App im Entwicklermodus\
+Öffnen Sie  [http://localhost:5173](http://localhost:5173) in Ihrem Browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Die Seite wird neu laden wenn Sie änderungen vornehmen.\
 
 ### `npm run build`
 
-Builds the app for production to the `dist` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Erstellt einen  `dist` Ordner.\

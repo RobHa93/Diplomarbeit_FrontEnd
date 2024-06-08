@@ -8,7 +8,7 @@ Download Zip File von Github
 Um alle dependencies zu installieren.
 
 
-( Start der Render Applikation 
+( Start und Loginvorgang der Render Applikation 
 https://roha-ibaw.onrender.com/ )
 
 
